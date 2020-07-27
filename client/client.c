@@ -1,5 +1,9 @@
 #include "client.h"
-
+/**
+*@fn udp_socket_t* udp_client_init()
+*@brief initialize udp_socket_t* for client
+*@return udp_socket_t*
+*/
 udp_socket_t* udp_client_init(){	
 	udp_socket_t* client = malloc(sizeof(udp_socket_t*));
 	client->server_addr = malloc(sizeof(struct sockaddr_in));
@@ -14,14 +18,19 @@ udp_socket_t* udp_client_init(){
 	}
 	return client;
 }
+/**
+*@fn void udp_client_connect(udp_socket_t* client)
+*@brief handle user input and send to mid server and print the response from it.
+*@param udp_socket_t*
+*/
 void udp_client_connect(udp_socket_t* client){
 
 	ssize_t sendbytes;
 		ssize_t recvbytes;
 		int addr_len=sizeof(struct sockaddr);
 		int i=0;
-		protocol_packet_t* send_packet = protocol_packet_init();
-		protocol_packet_t* recv_packet = protocol_packet_init();
+		protocol_packet_t* send_packet = common_module_packet_init();
+		protocol_packet_t* recv_packet = common_module_packet_init();
 		char user_buffer[DATA_MAX_LENGTH];
 		while(1){
 			
@@ -70,7 +79,7 @@ void udp_client_connect(udp_socket_t* client){
 				recv_packet->data[DATA_MAX_LENGTH-1] = '\0';
 				protocol_print_message(recv_packet);
 			}
-			// destroy packets.
+
 			protocol_clean_packet(recv_packet);
 			protocol_clean_packet(send_packet);
 			protocol_increase_seq_id(send_packet);
@@ -80,15 +89,22 @@ void udp_client_connect(udp_socket_t* client){
 		protocol_packet_destroy(recv_packet);
 	
 }
+/**
+*@fn void udp_client_destroy(udp_socket_t* client)
+*@brief release udp_socket_t*
+*@param udp_socket_t*
+*/
 void udp_client_destroy(udp_socket_t* client){
 	close(client->SOCK);
 	free(client);
 
 }
-
+/**
+*@fn int main()
+*@brief main() for client
+*/
 int main(){
 	udp_socket_t* client = udp_client_init();
-
 	udp_client_connect(client);
 	udp_client_destroy(client);
 }

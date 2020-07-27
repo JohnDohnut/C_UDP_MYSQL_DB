@@ -3,7 +3,11 @@
 #include <errno.h>
 #include <stdlib.h>
 #include <memory.h>
+#include <string.h>
 void main(void){
+	char buf[1024];
+	int temp = 1;
+	memset(buf,0,1024);
 	MYSQL_RES *result /*= malloc(sizeof(MYSQL_RES))*/;
 	memset(result,0,sizeof(MYSQL_RES));
 	MYSQL* mysql = malloc(sizeof(MYSQL));
@@ -15,7 +19,7 @@ void main(void){
 	}
 	printf("connected\n") ;
 
-	if(mysql_query(mysql, "select * from book")){
+	if(mysql_query(mysql, "describe book")){
 		fprintf(stderr, "%s\n", mysql_error(mysql));
 		mysql_close(mysql);
 		exit(1);
@@ -27,13 +31,21 @@ void main(void){
 		exit(1);
 	}
 	int num_fields = mysql_num_fields(result);
+	printf("%d", num_fields);
 	MYSQL_ROW row;
 	int i=0;
 	while(row = mysql_fetch_row(result)){
 		for(i=0; i<num_fields;i++){
-			printf("%s	",row[i] ? row[i] : "NULL");
+			temp = row[i] ? 1 : 0;
+			if(temp == 1){
+			printf("%s %d \n",row[i]);
+			}
+			else
+				printf("%s %d\n","NULL", strlen("NULL"));
+
 		}
-		printf("\n");
+		printf("**\n");
+		
 	}
 	mysql_free_result(result);
 	

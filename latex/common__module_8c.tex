@@ -1,0 +1,107 @@
+\hypertarget{common__module_8c}{\section{common\-\_\-module/common\-\_\-module.c File Reference}
+\label{common__module_8c}\index{common\-\_\-module/common\-\_\-module.\-c@{common\-\_\-module/common\-\_\-module.\-c}}
+}
+{\ttfamily \#include \char`\"{}common\-\_\-module.\-h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+udp\-\_\-socket\-\_\-t $\ast$ \hyperlink{common__module_8c_aa96f71e4fc4ebe8d3515b2705efa375a}{common\-\_\-module\-\_\-udp\-\_\-server\-\_\-init} (int P\-O\-R\-T)
+\begin{DoxyCompactList}\small\item\em udp sock init for server \end{DoxyCompactList}\item 
+udp\-\_\-socket\-\_\-t $\ast$ \hyperlink{common__module_8c_a6e07aced58bdfcf38bc4a3d89889a60f}{common\-\_\-module\-\_\-udp\-\_\-client\-\_\-init} (int S\-E\-R\-V\-E\-R\-\_\-\-P\-O\-R\-T)
+\begin{DoxyCompactList}\small\item\em udp sock init for client \end{DoxyCompactList}\item 
+void \hyperlink{common__module_8c_a6671b273598bb12ea4572118ff0e690c}{common\-\_\-module\-\_\-udp\-\_\-socket\-\_\-destroy} (udp\-\_\-socket\-\_\-t $\ast$socket)
+\begin{DoxyCompactList}\small\item\em release udp\-\_\-socket\-\_\-t$\ast$ \end{DoxyCompactList}\item 
+int \hyperlink{common__module_8c_aae7c0215f55cc5bec9e3e3aca957b85f}{common\-\_\-module\-\_\-get\-\_\-fd} (udp\-\_\-socket\-\_\-t $\ast$socket)
+\begin{DoxyCompactList}\small\item\em getter for udp\-\_\-socket\-\_\-t$\ast$ -\/$>$ S\-O\-C\-K int \hyperlink{common__module_8c}{common\-\_\-module.\-c} \end{DoxyCompactList}\item 
+protocol\-\_\-packet\-\_\-t $\ast$ \hyperlink{common__module_8c_a6252f459c14c47056a92d6e0bb6966d3}{common\-\_\-module\-\_\-packet\-\_\-init} ()
+\begin{DoxyCompactList}\small\item\em malloc and initialize protocol\-\_\-packet\-\_\-t$\ast$ and return it \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{common__module_8c_aae7c0215f55cc5bec9e3e3aca957b85f}{\index{common\-\_\-module.\-c@{common\-\_\-module.\-c}!common\-\_\-module\-\_\-get\-\_\-fd@{common\-\_\-module\-\_\-get\-\_\-fd}}
+\index{common\-\_\-module\-\_\-get\-\_\-fd@{common\-\_\-module\-\_\-get\-\_\-fd}!common_module.c@{common\-\_\-module.\-c}}
+\subsubsection[{common\-\_\-module\-\_\-get\-\_\-fd}]{\setlength{\rightskip}{0pt plus 5cm}int common\-\_\-module\-\_\-get\-\_\-fd (
+\begin{DoxyParamCaption}
+\item[{udp\-\_\-socket\-\_\-t $\ast$}]{socket}
+\end{DoxyParamCaption}
+)}}\label{common__module_8c_aae7c0215f55cc5bec9e3e3aca957b85f}
+
+
+getter for udp\-\_\-socket\-\_\-t$\ast$ -\/$>$ S\-O\-C\-K int \hyperlink{common__module_8c}{common\-\_\-module.\-c} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em udp\-\_\-socket\-\_\-t$\ast$} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\hypertarget{common__module_8c_a6252f459c14c47056a92d6e0bb6966d3}{\index{common\-\_\-module.\-c@{common\-\_\-module.\-c}!common\-\_\-module\-\_\-packet\-\_\-init@{common\-\_\-module\-\_\-packet\-\_\-init}}
+\index{common\-\_\-module\-\_\-packet\-\_\-init@{common\-\_\-module\-\_\-packet\-\_\-init}!common_module.c@{common\-\_\-module.\-c}}
+\subsubsection[{common\-\_\-module\-\_\-packet\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}protocol\-\_\-packet\-\_\-t $\ast$ common\-\_\-module\-\_\-packet\-\_\-init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{common__module_8c_a6252f459c14c47056a92d6e0bb6966d3}
+
+
+malloc and initialize protocol\-\_\-packet\-\_\-t$\ast$ and return it 
+
+\begin{DoxyReturn}{Returns}
+protocol\-\_\-packet\-\_\-t$\ast$ 
+\end{DoxyReturn}
+\hypertarget{common__module_8c_a6e07aced58bdfcf38bc4a3d89889a60f}{\index{common\-\_\-module.\-c@{common\-\_\-module.\-c}!common\-\_\-module\-\_\-udp\-\_\-client\-\_\-init@{common\-\_\-module\-\_\-udp\-\_\-client\-\_\-init}}
+\index{common\-\_\-module\-\_\-udp\-\_\-client\-\_\-init@{common\-\_\-module\-\_\-udp\-\_\-client\-\_\-init}!common_module.c@{common\-\_\-module.\-c}}
+\subsubsection[{common\-\_\-module\-\_\-udp\-\_\-client\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}udp\-\_\-socket\-\_\-t $\ast$ common\-\_\-module\-\_\-udp\-\_\-client\-\_\-init (
+\begin{DoxyParamCaption}
+\item[{int}]{S\-E\-R\-V\-E\-R\-\_\-\-P\-O\-R\-T}
+\end{DoxyParamCaption}
+)}}\label{common__module_8c_a6e07aced58bdfcf38bc4a3d89889a60f}
+
+
+udp sock init for client 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+udp\-\_\-socket\-\_\-t$\ast$ 
+\end{DoxyReturn}
+\hypertarget{common__module_8c_aa96f71e4fc4ebe8d3515b2705efa375a}{\index{common\-\_\-module.\-c@{common\-\_\-module.\-c}!common\-\_\-module\-\_\-udp\-\_\-server\-\_\-init@{common\-\_\-module\-\_\-udp\-\_\-server\-\_\-init}}
+\index{common\-\_\-module\-\_\-udp\-\_\-server\-\_\-init@{common\-\_\-module\-\_\-udp\-\_\-server\-\_\-init}!common_module.c@{common\-\_\-module.\-c}}
+\subsubsection[{common\-\_\-module\-\_\-udp\-\_\-server\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}udp\-\_\-socket\-\_\-t $\ast$ common\-\_\-module\-\_\-udp\-\_\-server\-\_\-init (
+\begin{DoxyParamCaption}
+\item[{int}]{P\-O\-R\-T}
+\end{DoxyParamCaption}
+)}}\label{common__module_8c_aa96f71e4fc4ebe8d3515b2705efa375a}
+
+
+udp sock init for server 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+udp\-\_\-socket\-\_\-t$\ast$ 
+\end{DoxyReturn}
+\hypertarget{common__module_8c_a6671b273598bb12ea4572118ff0e690c}{\index{common\-\_\-module.\-c@{common\-\_\-module.\-c}!common\-\_\-module\-\_\-udp\-\_\-socket\-\_\-destroy@{common\-\_\-module\-\_\-udp\-\_\-socket\-\_\-destroy}}
+\index{common\-\_\-module\-\_\-udp\-\_\-socket\-\_\-destroy@{common\-\_\-module\-\_\-udp\-\_\-socket\-\_\-destroy}!common_module.c@{common\-\_\-module.\-c}}
+\subsubsection[{common\-\_\-module\-\_\-udp\-\_\-socket\-\_\-destroy}]{\setlength{\rightskip}{0pt plus 5cm}void common\-\_\-module\-\_\-udp\-\_\-socket\-\_\-destroy (
+\begin{DoxyParamCaption}
+\item[{udp\-\_\-socket\-\_\-t $\ast$}]{socket}
+\end{DoxyParamCaption}
+)}}\label{common__module_8c_a6671b273598bb12ea4572118ff0e690c}
+
+
+release udp\-\_\-socket\-\_\-t$\ast$ 
+
+
+\begin{DoxyParams}{Parameters}
+{\em udp\-\_\-socket\-\_\-t$\ast$} & \\
+\hline
+\end{DoxyParams}

@@ -1,0 +1,177 @@
+\hypertarget{library__db_8c}{\section{db\-\_\-server/library\-\_\-db/library\-\_\-db.c File Reference}
+\label{library__db_8c}\index{db\-\_\-server/library\-\_\-db/library\-\_\-db.\-c@{db\-\_\-server/library\-\_\-db/library\-\_\-db.\-c}}
+}
+{\ttfamily \#include \char`\"{}library\-\_\-db.\-h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+library\-\_\-db\-\_\-t $\ast$ \hyperlink{library__db_8c_a3d60de5dbd8ead32d926e12a8c40dfda}{library\-\_\-db\-\_\-t\-\_\-init} ()
+\begin{DoxyCompactList}\small\item\em malloc and initialize and db struct and return it \end{DoxyCompactList}\item 
+int \hyperlink{library__db_8c_a49e8de36dfab5c2b1154878419bb5d98}{library\-\_\-db\-\_\-close\-\_\-connection} (library\-\_\-db\-\_\-t $\ast$D\-B\-\_\-\-C\-O\-N\-N)
+\begin{DoxyCompactList}\small\item\em close connection to db and release library\-\_\-db\-\_\-t$\ast$ \end{DoxyCompactList}\item 
+int \hyperlink{library__db_8c_a66793c801909fd7fef6b3794ca2463c7}{library\-\_\-db\-\_\-connect} (library\-\_\-db\-\_\-t $\ast$D\-B\-\_\-\-C\-O\-N\-N)
+\begin{DoxyCompactList}\small\item\em db connect \end{DoxyCompactList}\item 
+int \hyperlink{library__db_8c_a649103a0225c1739eb61713ff61525b5}{library\-\_\-db\-\_\-send\-\_\-query} (library\-\_\-db\-\_\-t $\ast$D\-B\-\_\-\-C\-O\-N\-N)
+\begin{DoxyCompactList}\small\item\em send query to db server \end{DoxyCompactList}\item 
+int \hyperlink{library__db_8c_a773b3c773ef9be66489b7638521f0a15}{library\-\_\-db\-\_\-recv\-\_\-result} (library\-\_\-db\-\_\-t $\ast$D\-B\-\_\-\-C\-O\-N\-N)
+\begin{DoxyCompactList}\small\item\em store query result \end{DoxyCompactList}\item 
+int \hyperlink{library__db_8c_a17e80c068d20e281e8891b7fcb79805b}{library\-\_\-db\-\_\-print\-\_\-result} (library\-\_\-db\-\_\-t $\ast$D\-B\-\_\-\-C\-O\-N\-N)
+\begin{DoxyCompactList}\small\item\em print query result \end{DoxyCompactList}\item 
+int \hyperlink{library__db_8c_a4e4cf9acf373ac5c924307b60bf16398}{library\-\_\-db\-\_\-print\-\_\-result\-\_\-to\-\_\-buffer} (library\-\_\-db\-\_\-t $\ast$D\-B\-\_\-\-C\-O\-N\-N, char $\ast$buffer)
+\begin{DoxyCompactList}\small\item\em formatted print query result to buffer \end{DoxyCompactList}\item 
+int \hyperlink{library__db_8c_a160782c993b85e30feadc681bc0f5a48}{library\-\_\-db\-\_\-set\-\_\-query} (library\-\_\-db\-\_\-t $\ast$D\-B\-\_\-\-C\-O\-N\-N, char $\ast$query)
+\begin{DoxyCompactList}\small\item\em set query \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{library__db_8c_a49e8de36dfab5c2b1154878419bb5d98}{\index{library\-\_\-db.\-c@{library\-\_\-db.\-c}!library\-\_\-db\-\_\-close\-\_\-connection@{library\-\_\-db\-\_\-close\-\_\-connection}}
+\index{library\-\_\-db\-\_\-close\-\_\-connection@{library\-\_\-db\-\_\-close\-\_\-connection}!library_db.c@{library\-\_\-db.\-c}}
+\subsubsection[{library\-\_\-db\-\_\-close\-\_\-connection}]{\setlength{\rightskip}{0pt plus 5cm}int library\-\_\-db\-\_\-close\-\_\-connection (
+\begin{DoxyParamCaption}
+\item[{library\-\_\-db\-\_\-t $\ast$}]{D\-B\-\_\-\-C\-O\-N\-N}
+\end{DoxyParamCaption}
+)}}\label{library__db_8c_a49e8de36dfab5c2b1154878419bb5d98}
+
+
+close connection to db and release library\-\_\-db\-\_\-t$\ast$ 
+
+
+\begin{DoxyParams}{Parameters}
+{\em library\-\_\-db\-\_\-t$\ast$} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\hypertarget{library__db_8c_a66793c801909fd7fef6b3794ca2463c7}{\index{library\-\_\-db.\-c@{library\-\_\-db.\-c}!library\-\_\-db\-\_\-connect@{library\-\_\-db\-\_\-connect}}
+\index{library\-\_\-db\-\_\-connect@{library\-\_\-db\-\_\-connect}!library_db.c@{library\-\_\-db.\-c}}
+\subsubsection[{library\-\_\-db\-\_\-connect}]{\setlength{\rightskip}{0pt plus 5cm}int library\-\_\-db\-\_\-connect (
+\begin{DoxyParamCaption}
+\item[{library\-\_\-db\-\_\-t $\ast$}]{D\-B\-\_\-\-C\-O\-N\-N}
+\end{DoxyParamCaption}
+)}}\label{library__db_8c_a66793c801909fd7fef6b3794ca2463c7}
+
+
+db connect 
+
+
+\begin{DoxyParams}{Parameters}
+{\em library\-\_\-db\-\_\-t$\ast$} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\hypertarget{library__db_8c_a17e80c068d20e281e8891b7fcb79805b}{\index{library\-\_\-db.\-c@{library\-\_\-db.\-c}!library\-\_\-db\-\_\-print\-\_\-result@{library\-\_\-db\-\_\-print\-\_\-result}}
+\index{library\-\_\-db\-\_\-print\-\_\-result@{library\-\_\-db\-\_\-print\-\_\-result}!library_db.c@{library\-\_\-db.\-c}}
+\subsubsection[{library\-\_\-db\-\_\-print\-\_\-result}]{\setlength{\rightskip}{0pt plus 5cm}int library\-\_\-db\-\_\-print\-\_\-result (
+\begin{DoxyParamCaption}
+\item[{library\-\_\-db\-\_\-t $\ast$}]{D\-B\-\_\-\-C\-O\-N\-N}
+\end{DoxyParamCaption}
+)}}\label{library__db_8c_a17e80c068d20e281e8891b7fcb79805b}
+
+
+print query result 
+
+
+\begin{DoxyParams}{Parameters}
+{\em library\-\_\-db\-\_\-t$\ast$} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\hypertarget{library__db_8c_a4e4cf9acf373ac5c924307b60bf16398}{\index{library\-\_\-db.\-c@{library\-\_\-db.\-c}!library\-\_\-db\-\_\-print\-\_\-result\-\_\-to\-\_\-buffer@{library\-\_\-db\-\_\-print\-\_\-result\-\_\-to\-\_\-buffer}}
+\index{library\-\_\-db\-\_\-print\-\_\-result\-\_\-to\-\_\-buffer@{library\-\_\-db\-\_\-print\-\_\-result\-\_\-to\-\_\-buffer}!library_db.c@{library\-\_\-db.\-c}}
+\subsubsection[{library\-\_\-db\-\_\-print\-\_\-result\-\_\-to\-\_\-buffer}]{\setlength{\rightskip}{0pt plus 5cm}int library\-\_\-db\-\_\-print\-\_\-result\-\_\-to\-\_\-buffer (
+\begin{DoxyParamCaption}
+\item[{library\-\_\-db\-\_\-t $\ast$}]{D\-B\-\_\-\-C\-O\-N\-N, }
+\item[{char $\ast$}]{buffer}
+\end{DoxyParamCaption}
+)}}\label{library__db_8c_a4e4cf9acf373ac5c924307b60bf16398}
+
+
+formatted print query result to buffer 
+
+
+\begin{DoxyParams}{Parameters}
+{\em library\-\_\-db\-\_\-t$\ast$} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\hypertarget{library__db_8c_a773b3c773ef9be66489b7638521f0a15}{\index{library\-\_\-db.\-c@{library\-\_\-db.\-c}!library\-\_\-db\-\_\-recv\-\_\-result@{library\-\_\-db\-\_\-recv\-\_\-result}}
+\index{library\-\_\-db\-\_\-recv\-\_\-result@{library\-\_\-db\-\_\-recv\-\_\-result}!library_db.c@{library\-\_\-db.\-c}}
+\subsubsection[{library\-\_\-db\-\_\-recv\-\_\-result}]{\setlength{\rightskip}{0pt plus 5cm}int library\-\_\-db\-\_\-recv\-\_\-result (
+\begin{DoxyParamCaption}
+\item[{library\-\_\-db\-\_\-t $\ast$}]{D\-B\-\_\-\-C\-O\-N\-N}
+\end{DoxyParamCaption}
+)}}\label{library__db_8c_a773b3c773ef9be66489b7638521f0a15}
+
+
+store query result 
+
+
+\begin{DoxyParams}{Parameters}
+{\em library\-\_\-db\-\_\-t$\ast$} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\hypertarget{library__db_8c_a649103a0225c1739eb61713ff61525b5}{\index{library\-\_\-db.\-c@{library\-\_\-db.\-c}!library\-\_\-db\-\_\-send\-\_\-query@{library\-\_\-db\-\_\-send\-\_\-query}}
+\index{library\-\_\-db\-\_\-send\-\_\-query@{library\-\_\-db\-\_\-send\-\_\-query}!library_db.c@{library\-\_\-db.\-c}}
+\subsubsection[{library\-\_\-db\-\_\-send\-\_\-query}]{\setlength{\rightskip}{0pt plus 5cm}int library\-\_\-db\-\_\-send\-\_\-query (
+\begin{DoxyParamCaption}
+\item[{library\-\_\-db\-\_\-t $\ast$}]{D\-B\-\_\-\-C\-O\-N\-N}
+\end{DoxyParamCaption}
+)}}\label{library__db_8c_a649103a0225c1739eb61713ff61525b5}
+
+
+send query to db server 
+
+
+\begin{DoxyParams}{Parameters}
+{\em library\-\_\-db\-\_\-t$\ast$} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\hypertarget{library__db_8c_a160782c993b85e30feadc681bc0f5a48}{\index{library\-\_\-db.\-c@{library\-\_\-db.\-c}!library\-\_\-db\-\_\-set\-\_\-query@{library\-\_\-db\-\_\-set\-\_\-query}}
+\index{library\-\_\-db\-\_\-set\-\_\-query@{library\-\_\-db\-\_\-set\-\_\-query}!library_db.c@{library\-\_\-db.\-c}}
+\subsubsection[{library\-\_\-db\-\_\-set\-\_\-query}]{\setlength{\rightskip}{0pt plus 5cm}int library\-\_\-db\-\_\-set\-\_\-query (
+\begin{DoxyParamCaption}
+\item[{library\-\_\-db\-\_\-t $\ast$}]{D\-B\-\_\-\-C\-O\-N\-N, }
+\item[{char $\ast$}]{query}
+\end{DoxyParamCaption}
+)}}\label{library__db_8c_a160782c993b85e30feadc681bc0f5a48}
+
+
+set query 
+
+
+\begin{DoxyParams}{Parameters}
+{\em library\-\_\-db\-\_\-t$\ast$} & \\
+\hline
+{\em library\-\_\-db\-\_\-t$\ast$} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\hypertarget{library__db_8c_a3d60de5dbd8ead32d926e12a8c40dfda}{\index{library\-\_\-db.\-c@{library\-\_\-db.\-c}!library\-\_\-db\-\_\-t\-\_\-init@{library\-\_\-db\-\_\-t\-\_\-init}}
+\index{library\-\_\-db\-\_\-t\-\_\-init@{library\-\_\-db\-\_\-t\-\_\-init}!library_db.c@{library\-\_\-db.\-c}}
+\subsubsection[{library\-\_\-db\-\_\-t\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}library\-\_\-db\-\_\-t $\ast$ library\-\_\-db\-\_\-t\-\_\-init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{library__db_8c_a3d60de5dbd8ead32d926e12a8c40dfda}
+
+
+malloc and initialize and db struct and return it 
+
+\begin{DoxyReturn}{Returns}
+library\-\_\-db\-\_\-t$\ast$ 
+\end{DoxyReturn}
